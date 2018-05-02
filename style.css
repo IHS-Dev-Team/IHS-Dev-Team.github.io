@@ -3,9 +3,22 @@ body {
 }
 
 body {
-    background-color: blueviolet;
+    background: linear-gradient(to right, purple, white);
+}
+
+button {
+    background-color: lightblue;
+    border: none;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: blue;
 }
 
 #game {
      border: solid;
 }
+
