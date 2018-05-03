@@ -2,14 +2,17 @@
 <head>
     <title>IHS Dev Team</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="gameloader.js"></script>
+    <script src="graphics.js"></script>
+    <script src="sprites.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
 </head>
 
-<body onload="load()">
-<h1>Template for IHS Dev Team website.</h1>
-<p>Content will be added.</p>
-<a onclick="start()" id="button">
-    <button>Game</button>
-</a>
+<body>
+    <h1>BlockShooter</h1>
+    <canvas id="game"></canvas>
+    <p>WASD: move</p>
+    <p>SPACE: shoot</p>
+    <p>P: pause</p>
+    <p>R: restart</p>
 </body>
-
