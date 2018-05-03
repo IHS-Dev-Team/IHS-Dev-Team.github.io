@@ -3,7 +3,7 @@ body {
 }
 
 body {
-    background: linear-gradient(to right, purple, white);
+    background: linear-gradient(45deg, purple, white);
 }
 
 button {
