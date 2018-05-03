@@ -68,7 +68,7 @@ function Enemy(x, y, target) {
             this.dx = this.tmpSpeed;
             return;
         }
-        if (this.jumping && !this.nojumping && this.onGround && Math.random() < 0.5) {
+        if (this.jumping && !this.nojumping && this.onGround && Math.random() < 0.8) {
             this.jump();
             if (this.scaleX === 1) {
                 this.right();
