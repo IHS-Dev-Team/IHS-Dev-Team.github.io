@@ -7,7 +7,7 @@ body {
 }
 
 button {
-    background-color: orange;
+    background-color:  #80ccff;
     border: none;
     font-size: 16px;
     border-radius: 4px;
@@ -15,7 +15,7 @@ button {
 }
 
 button:hover {
-    background-color: red;
+    background-color:  #008ae6;
 }
 
 #game {
