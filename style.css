@@ -7,7 +7,7 @@ body {
 }
 
 button {
-    background-color:  linear-gradient(to top, #80ccff, white);
+    background-color:  linear-gradient(to top, #80ccff 23.5%, white 135%);
     border: none;
     font-size: 16px;
     border-radius: 4px;
