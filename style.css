@@ -7,18 +7,22 @@ body {
 }
 
 button {
-    background-color: orange;
-    border: none;
+    background-color: linear-gradient(to top, #80ccff 23.5%, white 135%);
     font-size: 16px;
+    border: none;
     border-radius: 4px;
     padding: 10px;
 }
 
 button:hover {
-    background-color: red;
+    background-color:  #008ae6;
+}
+
+a {
+    text-decoration: none;
 }
 
 #game {
-     border: solid;
+    border: solid;
 }
 
