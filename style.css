@@ -1,9 +1,6 @@
 body {
-    font-family: sans-serif
-}
-
-body {
     background: linear-gradient(154deg, purple 23.5%, aqua 135%);
+    font-family: sans-serif;
 }
 
 button {

@@ -1,9 +1,46 @@
 function Game() {
     this.load = function (n) {
+        Graphics.stop();
         [
             this.level0,
             this.level1
         ][n].call(this);
+
+        let paused = false;
+        let over = false;
+        const that = this;
+
+        function checkState() {
+            if (over && action['r']) {
+                clearInterval(int);
+                over = true;
+                that.load(n);
+            }
+            else if (!over) {
+                if (action['p'] && !paused) {
+                    paused = true;
+                    Graphics.add(new Intro("Paused"));
+                    Graphics.after(1, () => paused = false);
+                }
+                if (!Graphics.sprites.map(t => t.id).includes("Player")) {
+                    end("Game Over", "red");
+                    over = true;
+                }
+                let done = true;
+                Graphics.sprites.forEach(s => {
+                    if (s.id === "Enemy") {
+                        done = false;
+                    }
+                });
+                if (done) {
+                    end("Victory", "green");
+                    over = true;
+                }
+            }
+        }
+
+        Graphics.start(fps);
+        let int = setInterval(checkState, 100);
     };
 }
 
@@ -12,8 +49,6 @@ function end(text, color = "red") {
 }
 
 Game.prototype.level0 = function () {
-    Graphics.stop();
-
     function Tmp(x, y) {
         this.ax = x;
         this.ay = y;
@@ -63,7 +98,6 @@ Game.prototype.level0 = function () {
         }
     }
 
-    let int = setInterval(checkState, 100);
     spawn(400, 50);
     spawn(650, 250);
     spawn(220, 170);
@@ -71,23 +105,6 @@ Game.prototype.level0 = function () {
     spawn(200, -150);
     spawn(350, 400);
     spawn(-100, 0);
-
-    function checkState() {
-        if (!Graphics.sprites.includes(player)) {
-            end("Game Over", "red");
-            clearInterval(int);
-        }
-        let done = true;
-        Graphics.sprites.forEach(s => {
-            if (s.id === "Enemy") {
-                done = false;
-            }
-        });
-        if (done) {
-            end("Victory", "green");
-            clearInterval(int);
-        }
-    }
 
     const ground = new Barrier(0, 750, 3000, 200);
     const hill1 = new Barrier(200, 700, 300, 300);
@@ -101,7 +118,7 @@ Game.prototype.level0 = function () {
     Graphics.add(Gravity, p1, player, ground, wall1, wall2, roof, hill1, hill2, hill3);
 };
 
-Game.prototype.level1 = function reload() {
+Game.prototype.level1 = function () {
     Graphics.stop();
 
     const intro = new Intro("BlockShooter");
@@ -121,41 +138,6 @@ Game.prototype.level1 = function reload() {
     spawn(200, -150);
     spawn(300, 400);
     spawn(-100, 0);
-
-    let paused = false;
-    let over = false;
-
-    function checkState() {
-        if (over && action['r']) {
-            clearInterval(int);
-            over = true;
-            reload();
-            Graphics.start(fps);
-        }
-        else if (!over) {
-            if (action['p'] && !paused) {
-                paused = true;
-                Graphics.add(new Intro("Paused"));
-                Graphics.after(1, () => paused = false);
-            }
-            if (!Graphics.sprites.includes(player)) {
-                end("Game Over", "red");
-                over = true;
-            }
-            let done = true;
-            Graphics.sprites.forEach(s => {
-                if (s.id === "Enemy") {
-                    done = false;
-                }
-            });
-            if (done) {
-                end("Victory", "green");
-                over = true;
-            }
-        }
-    }
-
-    let int = setInterval(checkState, 100);
 
     const port1 = new Portal(700, 400);
     const port2 = new Portal(-100, -200);
