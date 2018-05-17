@@ -26,7 +26,13 @@
 <body>
 <h1>IHS Dev Team</h1>
 <h2 id="aboutUs">About Us</h2>
-<object data="AboutUs.txt"></object>
+<p id="aboutusparagraph">beep boop</p>
+
+<script>
+    // Fetches the about us text and puts it in the proper paragraph
+    fetch("AboutUs.txt").then(response => response.text().then(text => document.querySelector("#aboutusparagraph").innerHTML = text));
+</script>
+
 <h2 id="shooter">BlockShooter</h2>
 <canvas id="game"></canvas>
 <p>WASD: move</p>
