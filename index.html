@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <head>
     <title>IHS Dev Team</title>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -6,27 +7,29 @@
     <script src="BlockShooter/sprites.js"></script>
     <script src="BlockShooter/game.js"></script>
     <script src="BlockShooter/main.js"></script>
+    <script src="buttons.js"></script>
 </head>
-    
+
 <!-- Navigation Bar-->
-<nav class="bar">
+<nav id="menu" class="bar">
     <a href="#home" class="bar">
-        <button>Home</button>
+        <button class="btn active">Home</button>
     </a>
     <a href="#aboutUs" class="bar">
-        <button>About Us</button>
+        <button class="btn">About Us</button>
     </a>
     <a href="#shooter" class="bar">
-        <button>Game</button>
+        <button class="btn">Game</button>
     </a>
     <a href="#competitions" class="bar">
-        <button>Competitions</button>
+        <button class="btn">Competitions</button>
     </a>
 </nav>
+
 <body id="home">
-<h1>IHS Dev Team</h1>
-<h2 id="aboutUs">About Us</h2>
-<p id="aboutusparagraph">beep boop</p>
+    <h1>IHS Dev Team</h1>
+    <h2 id="aboutUs">About Us</h2>
+    <p id="aboutusparagraph">beep boop</p>
 
 <script>
     // Fetches the about us text and puts it in the proper paragraph
