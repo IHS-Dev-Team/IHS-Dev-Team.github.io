@@ -7,7 +7,18 @@
     <script src="BlockShooter/sprites.js"></script>
     <script src="BlockShooter/game.js"></script>
     <script src="BlockShooter/main.js"></script>
-    <script src="buttons.js"></script>
+    <script>
+        // Add active class to the current button (highlight it)
+    var navBar = document.getElementById("menu");
+    var btns = navBar.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active"
+        });
+    }
+    </script>
 </head>
 
 <!-- Navigation Bar-->
