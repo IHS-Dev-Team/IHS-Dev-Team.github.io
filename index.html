@@ -9,8 +9,6 @@
     <script src="BlockShooter/main.js"></script>
 </head>
 
-<body id="home">
-<div class='bg'></div>
 <!-- Navigation Bar-->
 <nav id="menu" class="bar">
     <a href="#home" class="bar">
@@ -29,24 +27,21 @@
         <button class="btn">Announcements</button>
     </a>
 </nav>
-<div class='left'>
 
-    <h1>IHS Dev Team</h1>
-    <h2 id="aboutUs">About Us</h2>
-    <p id="aboutusparagraph">beep boop</p>
-    <script src="buttons.js"></script>
+<body id="home">
+<h1>IHS Dev Team</h1>
+<h2 id="aboutUs">About Us</h2>
+<p id="aboutusparagraph">
+The IHS Dev Team is a club at Ithaca High School dedicated to learning programming and participating in coding competitions. 
+This website was created to practice Javascript, CSS and website programming.
+</p>
+<script src="buttons.js"></script>
 
-<script>
-    // Fetches the about us text and puts it in the proper paragraph
-    fetch("AboutUs.txt").then(response => response.text().then(text => document.querySelector("#aboutusparagraph").innerHTML = text));
-</script>
-</div>
-<div class='left'>
+
 <h2 id="shooter">BlockShooter</h2>
 <canvas id="game"></canvas>
 <p>WASD: move</p>
 <p>SPACE: shoot</p>
 <p>P: pause</p>
 <p>R: restart</p>
-</div>
 </body>
