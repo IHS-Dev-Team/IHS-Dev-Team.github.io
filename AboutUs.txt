@@ -1,2 +1,0 @@
-The IHS Dev Team is a club at Ithaca High School dedicated to learning programming and participating in coding competitions. 
-This website was created to practice Javascript, CSS and website programming.
