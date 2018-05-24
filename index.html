@@ -9,6 +9,8 @@
     <script src="BlockShooter/main.js"></script>
 </head>
 
+<body id="home">
+<div class='bg'></div>
 <!-- Navigation Bar-->
 <nav id="menu" class="bar">
     <a href="#home" class="bar">
@@ -27,8 +29,8 @@
         <button class="btn">Announcements</button>
     </a>
 </nav>
+<div class='left'>
 
-<body id="home">
     <h1>IHS Dev Team</h1>
     <h2 id="aboutUs">About Us</h2>
     <p id="aboutusparagraph">beep boop</p>
@@ -38,11 +40,13 @@
     // Fetches the about us text and puts it in the proper paragraph
     fetch("AboutUs.txt").then(response => response.text().then(text => document.querySelector("#aboutusparagraph").innerHTML = text));
 </script>
-
+</div>
+<div class='left'>
 <h2 id="shooter">BlockShooter</h2>
 <canvas id="game"></canvas>
 <p>WASD: move</p>
 <p>SPACE: shoot</p>
 <p>P: pause</p>
 <p>R: restart</p>
+</div>
 </body>
