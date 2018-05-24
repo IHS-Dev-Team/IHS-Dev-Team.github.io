@@ -29,15 +29,14 @@
 </nav>
 
 <body id="home">
-    <h1>IHS Dev Team</h1>
-    <h2 id="aboutUs">About Us</h2>
-    <p id="aboutusparagraph">beep boop</p>
-    <script src="buttons.js"></script>
+<h1>IHS Dev Team</h1>
+<h2 id="aboutUs">About Us</h2>
+<p id="aboutusparagraph">
+The IHS Dev Team is a club at Ithaca High School dedicated to learning programming and participating in coding competitions. 
+This website was created to practice Javascript, CSS and website programming.
+</p>
+<script src="buttons.js"></script>
 
-<script>
-    // Fetches the about us text and puts it in the proper paragraph
-    fetch("AboutUs.txt").then(response => response.text().then(text => document.querySelector("#aboutusparagraph").innerHTML = text));
-</script>
 
 <h2 id="shooter">BlockShooter</h2>
 <canvas id="game"></canvas>
