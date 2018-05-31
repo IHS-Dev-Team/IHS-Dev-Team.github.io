@@ -13,15 +13,21 @@ button {
     padding: 10px;
 }
 
-nav {
-    background: #58a9ff;
-    border-radius: 5px;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0px;
+#outer {
+    margin-top: 75px;
 }
 
-a {
+#navbar
+{   
+    background: #58a9ff;
+    border-radius: 5px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    transition: top 0.5s;
+}
+
+#navbar a {
     text-decoration: none;
 }
 
