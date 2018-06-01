@@ -13,15 +13,16 @@ button {
 }
 
 #outer {
-    margin-top: 65px;
+    margin-top: 75px;
 }
 
 #navbar {
     background: #58a9ff;
     border-radius: 5px;
-    top: 0;
+    top: 5px;
+    left: 5px;
+    right: 5px;
     position: fixed;
-    width: 100%;
     transition: top 0.5s;
 }
 
