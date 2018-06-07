@@ -58,3 +58,12 @@ button:hover {
     background-size: cover;
 }
 
+.box {
+    opacity: 1.0;
+    text-align: center;
+    color: black;
+    margin: 35px;
+    height: auto;
+    background-color: rgba(120, 120, 120, 0.4);
+    padding: 25px;
+}
