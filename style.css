@@ -14,6 +14,7 @@ button {
 
 #outer {
     margin-top: 75px;
+    text-align: center;
 }
 
 #navbar {
@@ -66,4 +67,8 @@ button:hover {
     height: auto;
     background-color: rgba(120, 120, 120, 0.4);
     padding: 25px;
+}
+
+.box p {
+    text-align: left;
 }
