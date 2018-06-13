@@ -9,7 +9,8 @@
     <p>$content</p>
 </div>
 EOF;
-        $thread = $post . `cat .posts`;
+        $thread = strip_tags($post . `cat .posts`, '
+            <br><a><img><b><i><sup><sub><strong><em><h1><h2><h3><h4><mark><small><ins><del><p><div><video><iframe><object>');
         $handle = fopen('.posts', 'w');
         fwrite($handle, $thread);
     }  
