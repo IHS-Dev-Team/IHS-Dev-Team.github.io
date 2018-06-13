@@ -4,6 +4,11 @@
     <title>IHS Dev Team</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script src="utils/navbar.js"></script>
+    <style>
+        textarea {
+            width: 100%;
+        }
+    </style>
 </head>
 
 <?php
@@ -16,8 +21,9 @@
     <p>$content</p>
 </div>
 EOF;
-        $handle = fopen('.posts', 'a+');
-        fwrite($handle, $post);
+        $thread = $post . `cat .posts`;
+        $handle = fopen('.posts', 'w');
+        fwrite($handle, $thread);
     }  
 ?>
 
@@ -45,12 +51,12 @@ EOF;
 </nav>
 <div id="outer">
     <div class='box'><h1>Announcements</h1></div>
-    <?=`cat .posts`;?>
     <div class='box'>
         <form method='post'>
-        <textarea id='content' name='content' rows='4' cols='100%'></textarea><br>
+        <textarea id='content' name='content' rows='4'></textarea><br>
         <button type='submit'>Post</button>
         </form>
     </div>
+    <?=`cat .posts`;?>
 </div>
 </body>
