@@ -14,6 +14,7 @@ button {
 
 #outer {
     margin-top: 75px;
+    text-align: center;
 }
 
 #navbar {
@@ -41,6 +42,10 @@ button:hover {
 
 #game {
     border: solid;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bg {
@@ -54,7 +59,20 @@ button:hover {
     right: 0;
     height: 100%;
     width: 100%;
-    background: url("background.png") no-repeat center;
+    background: url("images/background.png") no-repeat center;
     background-size: cover;
 }
 
+.box {
+    opacity: 1.0;
+    text-align: center;
+    color: black;
+    margin: 35px;
+    height: auto;
+    background-color: rgba(120, 120, 120, 0.4);
+    padding: 25px;
+}
+
+.box p {
+    text-align: left;
+}

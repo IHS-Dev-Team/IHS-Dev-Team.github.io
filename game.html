@@ -7,7 +7,7 @@
     <script src="BlockShooter/sprites.js"></script>
     <script src="BlockShooter/game.js"></script>
     <script src="BlockShooter/main.js"></script>
-    <script src="navbar.js"></script>
+    <script src="utils/navbar.js"></script>
 </head>
 
 <body id="home">
@@ -25,7 +25,7 @@
     <a href="competitions.html" class="bar">
         <button class="btn">Competitions</button>
     </a>
-    <a href="announcements.html" class="bar">
+    <a href="announcements.php" class="bar">
         <button class="btn">Announcements</button>
     </a>
     <a href="contact.html" class="bar">
@@ -33,12 +33,13 @@
     </a>
 </nav>
 <div id="outer">
-    <h1>IHS Dev Team</h1>
-    <h2 id="shooter">BlockShooter</h2>
-    <p>WASD: move</p>
-    <p>SPACE: shoot</p>
-    <p>P: pause</p>
-    <p>R: restart</p>
+    <div class='box'><h1 id="shooter">BlockShooter</h1></div>
+    <div class='box'>
+        <p>WASD: move</p>
+        <p>SPACE: shoot</p>
+        <p>P: pause</p>
+        <p>R: restart</p>
+    </div>
     <canvas id="game"></canvas>
 </div>
 </body>
