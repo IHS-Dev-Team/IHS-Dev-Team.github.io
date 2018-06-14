@@ -10,12 +10,11 @@
 </div>
 EOF;
         $thread = strip_tags($post . `cat .posts`, '
-            <br><a><img><b><i><sup><sub><strong><em><h1><h2><h3><h4><mark><small><ins><del><p><div><video><iframe><object>');
+            <br><a><img><b><i><sup><sub><strong><em><h1><h2><h3><h4><mark><small><ins><del><p><div><video><iframe><object><table><source><tr><td><th>');
         $handle = fopen('.posts', 'w');
         fwrite($handle, $thread);
     }  
 ?>
-
 <!DOCTYPE html>
 
 <head>
