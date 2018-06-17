@@ -11,9 +11,6 @@
 <div class='bg'></div>
 <? include("navbar.php") ?>
 <div id="outer">
-    <div class='box'><h1>IHS Dev Team</h1></div>
-    <div class='box'>
-        <img width='600' src='images/pclassic_4.jpeg' alt='2017-2018 members'>
-    </div>
+    <div class='box'><h1>404 Not Found</h1></div>
 </div>
 </body>
